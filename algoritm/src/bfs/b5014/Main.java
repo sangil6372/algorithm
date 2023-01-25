@@ -22,6 +22,7 @@ public class Main {
 
 		bfs(S);
 
+		
 		if (dist[G] == 0 && S != G) {
 			System.out.println("use the stairs");
 		} else {
@@ -43,13 +44,13 @@ public class Main {
 				return;
 
 			if (next + U >= 1 && next + U <= F) {
-				if (dist[next + U] == 0) {
+				if (dist[next + U] == 0 && (next+U)!=startV) {
 					queue.add(next + U);
 					dist[next + U] = dist[next] + 1;
 				}
 			}
 			if (next - D >= 1 && next - D <= F) {
-				if (dist[next - D] == 0) {
+				if (dist[next - D] == 0&& (next-D)!=startV) {
 					queue.add(next - D);
 					dist[next - D] = dist[next] + 1;
 				}
