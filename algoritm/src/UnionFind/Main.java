@@ -55,6 +55,7 @@ public class Main {
 	}
 
 	static void unionSet(int a, int b) {
+		
 		if (a < b)
 			numSet[a] = b;
 		else
